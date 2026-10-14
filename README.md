@@ -12,44 +12,7 @@ Fake Investment & Job-Offer Scams: Telegram "task rating" and YouTube subscripti
 Mule-Account and Suspicious Beneficiary Velocity: Transient accounts created within days, experiencing rapid bursts of high-velocity inward credits and rapid siphoning.
 Phishing SMS and Malicious Payment Links: Spoofed banking domains, masked URL shorteners (bit.ly, is.gd), and trojanized APK downloads (SBI_YONO_Update.apk).
 Fake KYC Updates and Account-Blocking Threats: Panic-inducing threats of immediate electricity disconnection (e.g. "at 9:30 PM tonight") or bank account suspension.
-2. System Architecture
-                    ┌──────────────────────────────────────────────┐
-                    │               User / Client                  │
-                    │      (UPI App / Web Browser / Mobile)        │
-                    └──────────────────────┬───────────────────────┘
-                                           │
-                                  Payment Context &
-                                  Device Telemetry
-                                           │
-                                           ▼
-                    ┌──────────────────────────────────────────────┐
-                    │         PayRakshak AI Backend Gateway        │
-                    │               (FastAPI / REST)               │
-                    └──────┬───────────────┬───────────────┬───────┘
-                           │               │               │
-                           ▼               ▼               ▼
-                   ┌──────────────┐┌──────────────┐┌──────────────┐
-                   │  NLP Engine  ││ Rule Engine  ││  ML Ensemble │
-                   │  (TF-IDF +   ││ (Expert UPI  ││(Random Forest│
-                   │ Naive Bayes) ││  Heuristics) ││+ Grad. Boost)│
-                   └──────┬───────┘└──────┬───────┘└──────┬───────┘
-                          │               │               │
-                          └───────────────┼───────────────┘
-                                          │
-                                          ▼
-                         ┌─────────────────────────────────┐
-                         │   Multi-Factor Explainability   │
-                         │   Risk Attribution Engine       │
-                         └────────────────┬────────────────┘
-                                          │
-                                 Risk Score (0-100) &
-                                 Pre-Payment Interception
-                                          │
-                                          ▼
-                         ┌─────────────────────────────────┐
-                         │   Real-Time Mitigation Policy   │
-                         │  [BLOCK / CHALLENGE / ADVISE]   │
-                         └─────────────────────────────────┘
+
 3. Technology Stack
 Frontend: React 19, TypeScript, Vite, Tailwind CSS, Recharts, Lucide React.
 Backend: Python 3.12, FastAPI, Pydantic v2, SQLAlchemy, SQLite (production path to PostgreSQL).
